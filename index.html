@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Café do Vale - Tradição e qualidade em cada xícara desde 1970. Grãos premium, cultivo sustentável e experiência única."
+    />
+    <meta
+      name="keywords"
+      content="café, café premium, grãos de café, café sustentável, Minas Gerais, café especial"
+    />
+    <meta name="author" content="Café do Vale" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Café do Vale - Premium Coffee" />
+    <meta
+      property="og:description"
+      content="Da fazenda à sua xícara - Tradição e qualidade em cada grão"
+    />
+    <meta property="og:image" content="assets/images/plantacaocafe.avif" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Café do Vale - Premium Coffee" />
+    <meta
+      property="twitter:description"
+      content="Da fazenda à sua xícara - Tradição e qualidade em cada grão"
+    />
+
+    <title>Café do Vale - Da fazenda à sua xícara | Premium Coffee</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/plantacaocafe.avif" as="image" />
+    <link rel="preload" href="style/style.css" as="style" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style/style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link"
+      >Pular para o conteúdo principal</a
+    >
+
+    <header class="header" role="banner">
+      <div class="container">
+        <div class="logo">
+          <h1>Café do Vale</h1>
+          <span class="tagline">Premium Coffee</span>
+        </div>
+        <nav class="nav" role="navigation" aria-label="Menu principal">
+          <ul>
+            <li><a href="#inicio" aria-label="Ir para início">Início</a></li>
+            <li>
+              <a href="#empresa" aria-label="Ir para seção empresa">Empresa</a>
+            </li>
+            <li>
+              <a href="#servicos" aria-label="Ir para seção serviços"
+                >Serviços</a
+              >
+            </li>
+            <li>
+              <a href="#contato" aria-label="Ir para seção contato">Contato</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="mobile-menu-toggle"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Seção do Slider -->
+      <section
+        id="inicio"
+        class="hero-slider"
+        role="region"
+        aria-label="Carrossel de imagens principais"
+        aria-live="polite"
+      >
+        <div class="slider-container">
+          <div class="slide active" role="img" aria-label="Slide 1 de 4">
+            <img
+              src="assets/images/plantacaocafe.avif"
+              alt="Plantação de café com grãos vermelhos maduros em fazenda de Minas Gerais"
+              loading="eager"
+              width="1920"
+              height="1080"
+            />
+            <div class="slide-content">
+              <h2>Da fazenda à sua xícara</h2>
+              <p>Cultivamos os melhores grãos com tradição e qualidade</p>
+            </div>
+          </div>
+
+          <div class="slide" role="img" aria-label="Slide 2 de 4">
+            <img
+              src="assets/images/graoscafe.jpg"
+              alt="Grãos de café torrados de alta qualidade"
+              loading="lazy"
+              width="1920"
+              height="1080"
+            />
+            <div class="slide-content">
+              <h2>Grãos selecionados</h2>
+              <p>
+                Cada grão é cuidadosamente escolhido para garantir o sabor
+                perfeito
+              </p>
+            </div>
+          </div>
+
+          <div class="slide" role="img" aria-label="Slide 3 de 4">
+            <img
+              src="assets/images/xicaracafe.webp"
+              alt="Xícara elegante de porcelana com café premium"
+              loading="lazy"
+              width="1920"
+              height="1080"
+            />
+            <div class="slide-content">
+              <h2>Experiência única</h2>
+              <p>Momentos especiais merecem o melhor café</p>
+            </div>
+          </div>
+
+          <div class="slide" role="img" aria-label="Slide 4 de 4">
+            <img
+              src="assets/images/cafeteria.jpg"
+              alt="Interior aconchegante de cafeteria com ambiente acolhedor"
+              loading="lazy"
+              width="1920"
+              height="1080"
+            />
+            <div class="slide-content">
+              <h2>Ambiente acolhedor</h2>
+              <p>Venha viver a experiência completa do café premium</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles do slider -->
+        <button
+          class="slider-btn prev-btn"
+          onclick="changeSlide(-1)"
+          aria-label="Slide anterior"
+          type="button"
+        >
+          &#8249;
+        </button>
+        <button
+          class="slider-btn next-btn"
+          onclick="changeSlide(1)"
+          aria-label="Próximo slide"
+          type="button"
+        >
+          &#8250;
+        </button>
+
+        <!-- Indicadores -->
+        <div
+          class="slider-indicators"
+          role="tablist"
+          aria-label="Indicadores do carrossel"
+        >
+          <button
+            class="indicator active"
+            onclick="currentSlide(1)"
+            role="tab"
+            aria-label="Ir para slide 1"
+            aria-selected="true"
+          ></button>
+          <button
+            class="indicator"
+            onclick="currentSlide(2)"
+            role="tab"
+            aria-label="Ir para slide 2"
+            aria-selected="false"
+          ></button>
+          <button
+            class="indicator"
+            onclick="currentSlide(3)"
+            role="tab"
+            aria-label="Ir para slide 3"
+            aria-selected="false"
+          ></button>
+          <button
+            class="indicator"
+            onclick="currentSlide(4)"
+            role="tab"
+            aria-label="Ir para slide 4"
+            aria-selected="false"
+          ></button>
+        </div>
+      </section>
+
+      <!-- Seção Empresa -->
+      <section
+        id="empresa"
+        class="empresa"
+        role="region"
+        aria-labelledby="empresa-title"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2 id="empresa-title">Nossa História</h2>
+            <p>Tradição e qualidade em cada xícara</p>
+          </div>
+          <div class="empresa-content">
+            <div class="empresa-text">
+              <h3>Mais de 50 anos de tradição</h3>
+              <p>
+                Fundada em 1970, a Café do Vale nasceu do sonho de uma família
+                apaixonada por café. Começamos como uma pequena fazenda no
+                interior de Minas Gerais e hoje somos reconhecidos pela
+                qualidade excepcional dos nossos grãos.
+              </p>
+              <p>
+                Nossa missão é proporcionar momentos únicos através do melhor
+                café, cultivado com sustentabilidade e respeito ao meio
+                ambiente.
+              </p>
+              <div
+                class="stats"
+                role="list"
+                aria-label="Estatísticas da empresa"
+              >
+                <div class="stat" role="listitem">
+                  <h4 aria-label="50 anos">50+</h4>
+                  <span>Anos de tradição</span>
+                </div>
+                <div class="stat" role="listitem">
+                  <h4 aria-label="1000 hectares">1000+</h4>
+                  <span>Hectares cultivados</span>
+                </div>
+                <div class="stat" role="listitem">
+                  <h4 aria-label="100 por cento">100%</h4>
+                  <span>Sustentável</span>
+                </div>
+              </div>
+            </div>
+            <div class="empresa-image">
+              <img
+                src="assets/images/plantaçao1.jpg"
+                alt="Trabalhador colhendo grãos de café na plantação da Café do Vale"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Serviços -->
+      <section
+        id="servicos"
+        class="servicos"
+        role="region"
+        aria-labelledby="servicos-title"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2 id="servicos-title">Nossos Serviços</h2>
+            <p>Soluções completas para amantes do café</p>
+          </div>
+          <div class="servicos-grid" role="list">
+            <article class="servico-card" role="listitem">
+              <div class="servico-icon" aria-hidden="true">☕</div>
+              <h3>Café Premium</h3>
+              <p>
+                Grãos selecionados e torrados artesanalmente para garantir o
+                sabor único e marcante.
+              </p>
+            </article>
+            <article class="servico-card" role="listitem">
+              <div class="servico-icon" aria-hidden="true">🌱</div>
+              <h3>Cultivo Sustentável</h3>
+              <p>
+                Práticas agrícolas responsáveis que preservam o meio ambiente e
+                garantem qualidade.
+              </p>
+            </article>
+            <article class="servico-card" role="listitem">
+              <div class="servico-icon" aria-hidden="true">🚚</div>
+              <h3>Entrega Rápida</h3>
+              <p>
+                Café fresco entregue diretamente na sua casa ou empresa com
+                agilidade e cuidado.
+              </p>
+            </article>
+            <article class="servico-card" role="listitem">
+              <div class="servico-icon" aria-hidden="true">👥</div>
+              <h3>Consultoria</h3>
+              <p>
+                Orientação especializada para cafeterias e empresas que buscam
+                excelência.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Contato -->
+      <section
+        id="contato"
+        class="contato"
+        role="region"
+        aria-labelledby="contato-title"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2 id="contato-title">Entre em Contato</h2>
+            <p>Estamos prontos para atendê-lo</p>
+          </div>
+          <div class="contato-content">
+            <div class="contato-info">
+              <div class="info-item">
+                <h4>📍 Endereço</h4>
+                <address>
+                  Fazenda São José<br />
+                  Zona Rural, Carmo de Minas - MG<br />
+                  CEP: 37128-000
+                </address>
+              </div>
+              <div class="info-item">
+                <h4>📞 Telefone</h4>
+                <p>
+                  <a href="tel:+553533445566">(35) 3344-5566</a><br />
+                  <a href="https://wa.me/5535999998888"
+                    >WhatsApp: (35) 99999-8888</a
+                  >
+                </p>
+              </div>
+              <div class="info-item">
+                <h4>✉️ E-mail</h4>
+                <p>
+                  <a href="mailto:contato@cafedovale.com.br"
+                    >contato@cafedovale.com.br</a
+                  ><br />
+                  <a href="mailto:vendas@cafedovale.com.br"
+                    >vendas@cafedovale.com.br</a
+                  >
+                </p>
+              </div>
+              <div class="info-item">
+                <h4>🕒 Horário</h4>
+                <p>
+                  Segunda a Sexta: 8h às 18h<br />
+                  Sábado: 8h às 12h
+                </p>
+              </div>
+            </div>
+            <div class="contato-form">
+              <form role="form" aria-labelledby="form-title">
+                <h3 id="form-title" class="sr-only">Formulário de contato</h3>
+                <div class="form-group">
+                  <label for="nome" class="sr-only">Nome completo</label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Seu nome"
+                    required
+                    aria-required="true"
+                    autocomplete="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email" class="sr-only">E-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Seu e-mail"
+                    required
+                    aria-required="true"
+                    autocomplete="email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="telefone" class="sr-only">Telefone</label>
+                  <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="Seu telefone"
+                    autocomplete="tel"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="mensagem" class="sr-only">Mensagem</label>
+                  <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    placeholder="Sua mensagem"
+                    rows="5"
+                    required
+                    aria-required="true"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn-submit">
+                  Enviar Mensagem
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Café do Vale</h3>
+            <p>Tradição e qualidade em cada xícara desde 1970.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook da Café do Vale">Facebook</a>
+              <a href="#" aria-label="Instagram da Café do Vale">Instagram</a>
+              <a href="#" aria-label="YouTube da Café do Vale">YouTube</a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#empresa">Empresa</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Produtos</h4>
+            <ul>
+              <li><a href="#">Café Premium</a></li>
+              <li><a href="#">Café Orgânico</a></li>
+              <li><a href="#">Café Especial</a></li>
+              <li><a href="#">Acessórios</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <p><a href="tel:+553533445566">📞 (35) 3344-5566</a></p>
+            <p>
+              <a href="mailto:contato@cafedovale.com.br"
+                >✉️ contato@cafedovale.com.br</a
+              >
+            </p>
+            <p>📍 Manhuaçu - MG</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Café do Vale. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script/scripts.js"></script>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Café do Vale",
+        "description": "Tradição e qualidade em cada xícara desde 1970",
+        "url": "https://cafedovale.com.br",
+        "logo": "https://cafedovale.com.br/assets/images/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Fazenda São José, Zona Rural",
+          "addressLocality": "Carmo de Minas",
+          "addressRegion": "MG",
+          "postalCode": "37128-000",
+          "addressCountry": "BR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+55-35-3344-5566",
+          "contactType": "customer service",
+          "availableLanguage": "Portuguese"
+        },
+        "sameAs": [
+          "https://facebook.com/cafedovale",
+          "https://instagram.com/cafedovale",
+          "https://youtube.com/cafedovale"
+        ]
+      }
+    </script>
+
+    <!-- CSS adicional para acessibilidade -->
+    <style>
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: var(--primary-brown);
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 4px;
+        z-index: 10000;
+      }
+
+      .skip-link:focus {
+        top: 6px;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* Melhor foco para navegação por teclado */
+      *:focus {
+        outline: 2px solid var(--gold);
+        outline-offset: 2px;
+      }
+
+      /* Reduzir movimento para usuários sensíveis */
+      @media (prefers-reduced-motion: reduce) {
+        .slide {
+          transition: none;
+        }
+
+        .slider-btn,
+        .indicator {
+          transition: none;
+        }
+
+        .fade-in-up {
+          animation: none;
+        }
+      }
+    </style>
+  </body>
+</html>
