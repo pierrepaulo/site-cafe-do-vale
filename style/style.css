@@ -19,7 +19,7 @@
 
   /* Variáveis para responsividade */
   --header-height: 80px;
-  --slider-height-desktop: 100vh;
+  --slider-height-desktop: 80vh;
   --slider-height-mobile: 70vh;
   --slider-min-height: 400px;
 }
@@ -492,10 +492,10 @@ body {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .empresa-image img {
+  display: block;
   width: 100%;
   height: clamp(300px, 40vh, 400px);
   object-fit: cover;
