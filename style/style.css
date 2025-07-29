@@ -213,6 +213,10 @@ body {
   max-width: 100%;
 }
 
+.slide-4 .slide-content h2 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
 /* Controles do slider - responsivos */
 .slider-btn {
   position: absolute;
