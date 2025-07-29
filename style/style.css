@@ -492,13 +492,13 @@ body {
   letter-spacing: 1px;
 }
 
-.empresa-image {
+.empresa-video {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
 }
 
-.empresa-image img {
+.empresa-video video {
   display: block;
   width: 100%;
   height: clamp(300px, 40vh, 400px);
@@ -506,7 +506,7 @@ body {
   transition: transform 0.3s ease;
 }
 
-.empresa-image:hover img {
+.empresa-video:hover video {
   transform: scale(1.05);
 }
 
