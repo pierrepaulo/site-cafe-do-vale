@@ -409,7 +409,7 @@ body {
 }
 
 /* Seções gerais */
-section {
+.section-pad {
   padding: clamp(60px, 10vh, 100px) 0;
 }
 
